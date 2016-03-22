@@ -4,4 +4,56 @@ Language : Java
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Modular Design-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-End of Modular Design-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Application level 
+	No. of modules : 3
+	1. Document Addition (Optional)
+	2. Document Indexing (Necessary)
+	3. Document Search and Retreival (Necessary)
+
+
+	Level 1
+		1. Document Addition
+			**Later**
+			
+		2. Document Indexing
+			>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+				-> Database to store file info:
+										- Name
+										- Path
+										- Size
+										- authors etc
+										- Owner
+										- Date Created and Modified
+				-> Word list associated with the file based on frequency of the word, excluding #trivials#
+				-> Word based reverse indexing
+			<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+		3. Document Search and Retreival
+			>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+			-> Single Word Search:
+				- Use Reverse index
+			-> Multi Word:
+				- Exclude #trivials# and use Reverse index for each word
+			-> Phrase Search:
+				- Should be included in quotes
+				Search Level 1:
+					- Same as Multi Word Search
+				Search Level 2:
+					- Match phrases with every file found in each word
+					- Bruteforce phrase match with each file (Only if nothing else returns any results)
+			-> WildCard Match:
+				- Word Level:
+					- Use Tries
+				- Phrase Level:
+					- *** Contemplating
+					- Could brute force all the existing words
+					- Or maybe come up with an algo to skip a word between given words.
+			<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-End of Modular Design=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Foot Notes:
+#trivials# => [English Adjectives, Adverbs, Conjunctions etc]
