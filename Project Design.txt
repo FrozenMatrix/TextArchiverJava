@@ -1,0 +1,7 @@
+Name : Text Archiver
+Function : Text Documents archival and optimized search and retreival
+Language : Java
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Modular Design-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-End of Modular Design-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
