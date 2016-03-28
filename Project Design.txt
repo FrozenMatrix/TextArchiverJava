@@ -34,6 +34,7 @@ Application level
 				- Use Reverse index
 			-> Multi Word:
 				- Exclude #trivials# and use Reverse index for each word
+				- Cross check reverse index results, and get the intersection of the results
 			-> Phrase Search:
 				- Should be included in quotes
 				Search Level 1:
